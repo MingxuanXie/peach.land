@@ -11,11 +11,11 @@ AFRAME.registerComponent('show-nft', {
       var el = this.el;
       el.addEventListener('raycaster-intersected',function(){
         foo.style.display = "block";
-        console.log("hovered") 
+        // console.log("hovered") 
       });
       el.addEventListener('raycaster-intersected-cleared',function(){
         foo.style.display = "none";
-        console.log("leaved") 
+        // console.log("leaved") 
       });
      }
 });  

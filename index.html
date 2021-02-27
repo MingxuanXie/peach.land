@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>peach.land NFT VR Gallery</title>
+    <title>Peach.Land NFT VR Gallery</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.js"></script>
     <!-- <script src="scripts/show-info.js"></script> -->
@@ -51,7 +51,7 @@
         </a-entity>
       </a-entity>
 
-      <a-entity geometry="primitive: box" position="0 1 -5" show-nft="nft-1"></a-entity>
+      <a-entity geometry="primitive: sphere" material="color: white; opacity: 0.5" position="0 1.5 -5" show-nft="nft-1"></a-entity>
       <a-entity text="value: Hello World; " position="0 2 -1"></a-entity>
 
       <!-- <a-entity gltf-model="#navmesh" visible="false" nav-mesh></a-entity> -->
@@ -64,7 +64,7 @@
       <!-- <a-entity id="model-entity" gltf-model="#model-1" show-info="#test" position="0 0 0.1" scale="1 1 1" animation-mixer shadow="receive: false; cast: true"></a-entity> -->
       <a-entity id="main-scene-entity" gltf-model="#main-scene" position="0 0 0" scale="1 1 1" animation-mixer="loop: pingpong; timeScale: 0.35" shadow="receive: false; cast: true" kinematic-body></a-entity>
     </a-scene>
-    <div id="nft-1" class="overlay" hidden>
+    <div id="nft-1" class="nft-overlay" hidden>
       <nft-card contractAddress="0x495f947276749ce646f68ac8c248420045cb7b5e" tokenId="97568878673116838183761729851451051495890537051046052038038512440566645522433" horizontal></nft-card>
     </div>
   </body>

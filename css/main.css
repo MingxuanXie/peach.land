@@ -6,14 +6,14 @@
 body {
 /* background-color:lightgray; */
 background-color:black;
-/* background-image: linear-gradient(to bottom, darkred, grey ,black); */
+background-image: linear-gradient(to bottom, pink, grey ,black);
 }
 
-.overlay {
+.nft-overlay {
   z-index: 1;
   margin: 0;
   position: absolute;
-  top: 50%;
+  bottom: 0%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
