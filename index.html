@@ -1,0 +1,53 @@
+<!-- Working in Progress -->
+<!-- All rights reserved -->
+<!-- mingxuan.fun -->
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <!-- <script src="scripts/aframe-extras.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.js"></script>
+    <!-- <script src="scripts/aframe-orbit-controls.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body oncontextmenu="return false;">
+    <a-scene
+      renderer="antialias: true; colorManagement: true; logarithmicDepthBuffer: true" 
+      loading-screen="dotsColor: #fff; backgroundColor: black" 
+      vr-mode-ui="enabled: true"
+      device-orientation-permission-ui="enabled: false"
+      fog="type: exponential; color: #222; density: 0.01"
+    >
+      <a-assets>
+        <a-asset-item id="model-1" src="assets/model-1.glb"></a-asset-item>
+        <a-asset-item id="main-scene" src="assets/peach.land.glb"></a-asset-item>
+        <a-asset-item id="navmesh" src="assets/navmesh.glb"></a-asset-item>
+        <!-- <a-asset-item id="env" src="assets/cooper-hewitt_floor_03.glb"></a-asset-item> -->
+        <!-- <audio id="neigh" src="neigh.mp3"></audio> -->
+        <!-- <img id="advertisement" src="ad.png"> -->
+        <!-- <video id="kentucky-derby" src="derby.mp4"></video> -->
+      </a-assets>
+
+      <a-entity id="rig" movement-controls="constrainToNavMesh: false">
+        <a-entity camera
+                  position="0 1.6 0"
+                  look-controls="pointerLockEnabled: true">
+        </a-entity>
+      </a-entity>
+      <!-- <a-entity camera look-controls wasd-controls="acceleration:50" position="0 1.6 0"></a-entity> -->
+      <!-- orbit-controls="target: 0 2 0; minDistance: 0.3; maxDistance: 25; initialPosition: 0 2 3.75" -->
+
+      <a-entity  gltf-model="#navmesh" visible="false" nav-mesh></a-entity>
+      <!-- <a-grid></a-grid> -->
+      <!-- <a-ocean></a-ocean> -->
+
+      <a-sky color="#ECECEC"></a-sky>
+      <a-entity id="light-comp" position="0 4.25 -1">
+        <a-entity light="type: point; color: #fff; castShadow: false" position="0 0 0" ></a-entity>
+      </a-entity>
+      <a-entity light="type: directional; color: #EEE; intensity: 1.3" position="0 4 4"></a-entity>
+      <a-entity light="type: ambient; color: #999"></a-entity>
+      <a-entity id="model-entity" gltf-model="#model-1" position="0 0 0.1" scale="1 1 1" animation-mixer shadow="receive: false; cast: true"></a-entity>
+      <a-entity id="main-scene-entity" gltf-model="#main-scene" position="0 0 0" scale="1 1 1" animation-mixer="loop: pingpong; timeScale: 0.35" shadow="receive: false; cast: true" kinematic-body></a-entity>
+    </a-scene>
+  </body>
+</html>

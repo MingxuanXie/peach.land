@@ -1,0 +1,10 @@
+.a-loader-title {
+  z-index: 1;
+  position: absolute;
+  font-family: PingFangSC-Regular, sans-serif;
+}
+body {
+/* background-color:lightgray; */
+background-color:black;
+/* background-image: linear-gradient(to bottom, darkred, grey ,black); */
+}
