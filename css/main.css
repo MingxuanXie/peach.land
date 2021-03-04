@@ -2,10 +2,16 @@
   z-index: 1;
   position: absolute;
   font-family: PingFangSC-Regular, sans-serif;
+  visibility: collapse;
 }
+
+a {
+  color: magenta;
+  text-decoration: none;
+}
+
 body {
 /* background-color:lightgray; */
-background-color:black;
 background-image: linear-gradient(to bottom, pink, grey ,black);
 }
 
@@ -18,4 +24,12 @@ background-image: linear-gradient(to bottom, pink, grey ,black);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+#intro {
+  z-index: 1;
+  margin: 20px;
+  position: absolute;
+  font-family: PingFangSC-Regular, sans-serif;
+  color: black;
 }
