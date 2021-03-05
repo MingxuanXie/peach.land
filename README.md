@@ -8,7 +8,7 @@ Inspired by the ancient Chinese fiction *The Peach Blossom Land*, this experimen
 
 **Currently this project is pre-alpha**, which means to be a "testing ground" as related tech matured. It lacks many features for now, and anything could change in the future development.
 
-If you would like to collaborate with me on this project or something similar, feel free to join [Discord](https://discord.gg/ShG2MRC7Qu) or message me on [Instagram](https://www.instagram.com/mingxuan.fun/) or [Twitter](https://twitter.com/MingxuanXie).
+If you would like to collaborate with me on this project or something similar, feel free to [open issue](https://github.com/MingxuanXie/peach.land/issues) / [pull request](https://github.com/MingxuanXie/peach.land/pulls) / join [Discord](https://discord.gg/ShG2MRC7Qu) / message me on [Instagram](https://www.instagram.com/mingxuan.fun/) or [Twitter](https://twitter.com/MingxuanXie).
 
 **Key updates - ver0.1.0**
 1. designed and built the 3d virtual environment.
