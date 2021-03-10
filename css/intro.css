@@ -1,0 +1,9 @@
+#intro {
+  z-index: 1;
+  margin: 20px;
+  position: absolute;
+  font-family: PingFangSC-Regular, sans-serif;
+  color: black;
+  width: 95%;
+  height: 55%;
+}
