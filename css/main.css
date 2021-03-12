@@ -1,17 +1,9 @@
-.a-loader-title {
-  z-index: 1;
-  position: absolute;
-  font-family: PingFangSC-Regular, sans-serif;
-  visibility: collapse;
-}
-
 a {
   color: magenta;
   text-decoration: none;
 }
 
 body {
-/* background-color:lightgray; */
 background-image: linear-gradient(to bottom, pink, grey ,black);
 }
 
@@ -22,15 +14,28 @@ button {
   padding: 12px 24px;
   text-align: center;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 8px 0px;
   transition: 0.3s;
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 button:hover {background-color: grey;}
+
+iframe {
+  border: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.a-loader-title {
+  z-index: 1;
+  position: absolute;
+  font-family: PingFangSC-Regular, sans-serif;
+  visibility: collapse;
+}
 
 .nft-overlay {
   z-index: 1;
@@ -49,12 +54,8 @@ button:hover {background-color: grey;}
   position: absolute;
   font-family: PingFangSC-Regular, sans-serif;
   color: black;
-  width: 95%;
-  height: 55%;
-}
-
-iframe {
-  border: 0px;
-  width: 100%;
-  height: 100%;
+  height: 75%;
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.25);
+  border-radius: 8px;
 }
