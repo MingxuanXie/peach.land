@@ -1,0 +1,31 @@
+div {
+  z-index: 1;
+  margin: 4px 2px;
+  position: absolute;
+  font-family: PingFangSC-Regular, sans-serif;
+  color: black;
+}
+
+a {
+  color: magenta;
+  text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 9px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius:6px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius:6px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
