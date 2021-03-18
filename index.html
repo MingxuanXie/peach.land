@@ -5,17 +5,25 @@
   <head>
     <meta charset="utf-8">
     <title>Peach.Land NFT VR Gallery</title>
+    <script src="scripts/build.js"></script>
     <!-- Aframe 1.2.0 not working with aframe-extras -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.js"></script>
     <script src="scripts/show-nft.js"></script>
     <script src="scripts/nft-card.min.js"></script>
-    <script src="scripts/build.js"></script>
     <script src="scripts/aframe-particle-system-component.js"></script>
+    <script src="scripts/enable-ethereum.js"></script>
+    <script src="scripts/pointer-unlock.js"></script>
+    <script src="scripts/click-url.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body oncontextmenu="return false">
-<!-- Loading info -->
+<!-- UI -->
+    <div class="ui">
+      <div>Your account is <span class="showAccount"></span></div>
+      <button class="enableEthereumButton">Enable Metamask</button>
+      <button id="vrButton">Enable VR</button>
+    </div>
     <div id="intro">
       <iframe title="peach.land introduction" src="intro.html"></iframe>
       <button onclick="showOrHideDiv()">OK</button>
@@ -24,21 +32,21 @@
     <a-scene
       renderer="antialias: true; colorManagement: true; logarithmicDepthBuffer: false" 
       loading-screen="enabled: true; backgroundColor: pink"
-      vr-mode-ui="enabled: true"
-      device-orientation-permission-ui="enabled: true"
+      vr-mode-ui="enterVRButton: #vrButton"
+      device-orientation-permission-ui="enabled: false"
       fog="type: exponential; color: #222; density: 0.01"
     >
       <a-assets>
         <a-asset-item id="model-1" src="assets/model-1.glb"></a-asset-item>
         <a-asset-item id="main-scene" src="assets/peach.land.glb"></a-asset-item>
         <a-asset-item id="navmesh" src="assets/navmesh.glb"></a-asset-item>
-        <a-mixin id="info-text" 
+        <!-- <a-mixin id="info-text" 
                  text="font: mozillavr; align: center; baseline: bottom; color: black; width: 0.55; wrapCount: 30"
                  position="0 0.35 -0.5" 
                  geometry="primitive: plane; height: 0.25; width: auto"
                  material="color: black; opacity: 0.75"
                  visible="false">
-        </a-mixin>
+        </a-mixin> -->
         <!-- <audio id="neigh" src="neigh.mp3"></audio> -->
         <!-- <img id="advertisement" src="ad.png"> -->
         <!-- <video id="kentucky-derby" src="derby.mp4"></video> -->
@@ -53,15 +61,13 @@
                             geometry="primitive: ring; radiusInner: 0.016; radiusOuter: 0.020"
                             material="color: white; shader: flat; opacity: 0.5">
                   </a-entity>
-                  <a-entity id="test" mixin="info-text" text="value: Via stock font name."></a-entity>
         </a-entity>
         <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: highPoly; color: #cccccc"></a-entity>
         <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: highPoly; color: #cccccc"></a-entity>
       </a-entity>
       <a-entity gltf-model="#navmesh" visible="false" nav-mesh></a-entity>
 
-      <a-entity id="nft-example" geometry="primitive: sphere" material="color: pink; opacity: 0.5" position="0 1.5 -100" show-nft="nft-1"></a-entity>
-      <!-- <a-entity text="value: Hello World; " position="0 2 -1"></a-entity> -->
+      <a-entity id="nft-example" geometry="primitive: sphere" material="color: pink; opacity: 0.5" position="0 1.5 -3" show-nft="nft-1"></a-entity>
 
       <a-entity position="0 2.25 -15" particle-system="color: pink,grey; preset: snow"></a-entity>
       <!-- <a-grid></a-grid> -->
@@ -77,23 +83,7 @@
 <!-- NFT IMPLEMENTATION -->
     <div id="nft-1" class="nft-overlay" hidden>
       <nft-card contractAddress="0x495f947276749ce646f68ac8c248420045cb7b5e" tokenId="97568878673116838183761729851451051495890537051046052038038512440566645522433" horizontal></nft-card>
-      <button class="enableEthereumButton">Enable Metamask</button>
-      <h2>Account: <span class="showAccount"></span></h2>
     </div>
-    <script>
-      const ethereumButton = document.querySelector('.enableEthereumButton');
-      const showAccount = document.querySelector('.showAccount');
-
-      ethereumButton.addEventListener('click', () => {
-        getAccount();
-      });
-
-      async function getAccount() {
-        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-        const account = accounts[0];
-        showAccount.innerHTML = account;
-      }
-    </script>
 
   </body>
 </html>

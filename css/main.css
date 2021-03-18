@@ -4,17 +4,17 @@ a {
 }
 
 body {
-background-image: linear-gradient(to bottom, pink, grey ,black);
+  background-image: linear-gradient(to bottom, pink, grey ,#111);
 }
 
 button {
   background-color: black;
   border: none;
   color: white;
-  padding: 12px 24px;
+  padding: 10px 20px;
   text-align: center;
-  font-size: 16px;
-  margin: 8px 0px;
+  font-size: 14px;
+  margin: 0px 0px;
   transition: 0.3s;
   display: inline-block;
   text-decoration: none;
@@ -41,11 +41,19 @@ iframe {
   z-index: 1;
   margin: 0;
   position: absolute;
-  bottom: 25%;
+  bottom: 20px;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.ui {
+  z-index: 1;
+  position: absolute;
+  margin: 0px 0px 0px 0px;
+  right: 0%;
+  bottom: 0%;
 }
 
 #intro {
@@ -56,6 +64,6 @@ iframe {
   color: black;
   height: 75%;
   background-color: #fff;
-  background-color: rgba(255,255,255,0.25);
+  background-color: rgba(255,255,255,0.5);
   border-radius: 8px;
 }
