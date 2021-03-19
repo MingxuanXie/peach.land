@@ -1,5 +1,5 @@
 // works on safari, not working on Chrome?
-document.addEventListener("contextmenu", (event) => {
-  document.exitPointerLock();
-  // alert("Right clicked");
+document.addEventListener("contextmenu", () => {
+    document.exitPointerLock();
+    // alert("Right clicked");
 });

@@ -6,27 +6,33 @@
     <meta charset="utf-8">
     <title>Peach.Land NFT VR Gallery</title>
     <script src="scripts/build.js"></script>
-    <!-- Aframe 1.2.0 not working with aframe-extras -->
+    <!-- Aframe 1.2.0 not working with aframe-extras, use 1.0.4 for now -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.js"></script>
-    <script src="scripts/show-nft.js"></script>
-    <script src="scripts/nft-card.min.js"></script>
     <script src="scripts/aframe-particle-system-component.js"></script>
-    <script src="scripts/enable-ethereum.js"></script>
-    <script src="scripts/pointer-unlock.js"></script>
-    <script src="scripts/click-url.js"></script>
+    <script src="scripts/aframe-show-nft.js"></script>
+    <script src="scripts/aframe-click-url.js"></script>
+    <script src="scripts/enable-ethereum.js" defer></script>
+    <script src="scripts/pointer-unlock.js" defer></script>
+    <script src="scripts/nft-card.min.js" defer></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body oncontextmenu="return false">
 <!-- UI -->
     <div class="ui">
-      <div>Your account is <span class="showAccount"></span></div>
-      <button class="enableEthereumButton">Enable Metamask</button>
-      <button id="vrButton">Enable VR</button>
+      <div><span class="showAccount"></span></div>
+      <div>
+        <button class="enableEthereumButton">Enable Ethereum</button>
+        <button id="vrButton">Enable VR</button>
+      </div>
     </div>
     <div id="intro">
-      <iframe title="peach.land introduction" src="intro.html"></iframe>
-      <button onclick="showOrHideDiv()">OK</button>
+      <iframe src="intro.html"></iframe>
+      <button id="intro-button" onclick="showOrHideDiv()">OK</button>
+    </div>
+<!-- NFT IMPLEMENTATION -->
+    <div id="nft-1" class="nft-overlay" hidden>
+      <nft-card contractAddress="0x495f947276749ce646f68ac8c248420045cb7b5e" tokenId="97568878673116838183761729851451051495890537051046052038038512440566645522433" horizontal></nft-card>
     </div>
 <!-- Aframe -->
     <a-scene
@@ -66,24 +72,15 @@
         <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: highPoly; color: #cccccc"></a-entity>
       </a-entity>
       <a-entity gltf-model="#navmesh" visible="false" nav-mesh></a-entity>
-
-      <a-entity id="nft-example" geometry="primitive: sphere" material="color: pink; opacity: 0.5" position="0 1.5 -3" show-nft="nft-1"></a-entity>
-
+      <a-entity id="nft-example" geometry="primitive: sphere" material="color: pink; opacity: 0.5" position="0 1.5 -100" show-nft="nft-1"></a-entity>
       <a-entity position="0 2.25 -15" particle-system="color: pink,grey; preset: snow"></a-entity>
       <!-- <a-grid></a-grid> -->
       <!-- <a-ocean></a-ocean> -->
-
       <!-- <a-sky color="#ECECEC"></a-sky> -->
       <a-entity light="type: directional; color: #EEE; intensity: 1.3" position="0 4 4"></a-entity>
       <a-entity light="type: ambient; color: #999"></a-entity>
       <!-- <a-entity id="model-entity" gltf-model="#model-1" show-info="#test" position="0 0 0.1" scale="1 1 1" animation-mixer shadow="receive: false; cast: true"></a-entity> -->
       <a-entity id="main-scene-entity" gltf-model="#main-scene" position="0 0 0" scale="1 1 1" shadow="receive: false; cast: true"></a-entity>
     </a-scene>
-
-<!-- NFT IMPLEMENTATION -->
-    <div id="nft-1" class="nft-overlay" hidden>
-      <nft-card contractAddress="0x495f947276749ce646f68ac8c248420045cb7b5e" tokenId="97568878673116838183761729851451051495890537051046052038038512440566645522433" horizontal></nft-card>
-    </div>
-
   </body>
 </html>

@@ -1,7 +1,6 @@
 div {
   z-index: 1;
-  margin: 4px 2px;
-  position: absolute;
+  margin: 8px 4px;
   font-family: PingFangSC-Regular, sans-serif;
   color: black;
 }
@@ -22,10 +21,10 @@ a {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: grey;
   border-radius:6px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: darkgrey;
 }
