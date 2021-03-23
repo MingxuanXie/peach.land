@@ -5,13 +5,13 @@
   <head>
     <meta charset="utf-8">
     <title>Peach.Land NFT VR Gallery</title>
-    <script src="scripts/build.js"></script>
     <!-- Aframe 1.2.0 not working with aframe-extras, use 1.0.4 for now -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.js"></script>
     <script src="scripts/aframe-particle-system-component.js"></script>
     <script src="scripts/aframe-show-nft.js"></script>
     <script src="scripts/aframe-click-url.js"></script>
+    <script src="scripts/build.js" defer></script>
     <script src="scripts/enable-ethereum.js" defer></script>
     <script src="scripts/pointer-unlock.js" defer></script>
     <script src="scripts/nft-card.min.js" defer></script>
@@ -20,15 +20,15 @@
   <body oncontextmenu="return false">
 <!-- UI -->
     <div class="ui">
-      <div><span class="showAccount"></span></div>
       <div>
+        <div><span class="showAccount"></span></div>
         <button class="enableEthereumButton">Enable Ethereum</button>
         <button id="vrButton">Enable VR</button>
       </div>
     </div>
     <div id="intro">
       <iframe src="intro.html"></iframe>
-      <button id="intro-button" onclick="showOrHideDiv()">OK</button>
+      <button id="intro-button" onclick="introButton()">OK</button>
     </div>
 <!-- NFT IMPLEMENTATION -->
     <div id="nft-1" class="nft-overlay" hidden>

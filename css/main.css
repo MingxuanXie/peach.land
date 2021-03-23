@@ -55,6 +55,7 @@ iframe {
   position: absolute;
   margin: 0px;
   bottom: 0px;
+  display: none;
 }
 
 #intro {
