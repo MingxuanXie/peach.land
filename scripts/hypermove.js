@@ -1,7 +1,7 @@
-/***********************************************
-Script by Mingxuan Xie (http://mingxuan.fun/)
-MIT License
-***********************************************/
+/*
+@author   Mingxuan Xie <http://mingxuan.fun/>
+@license  MIT
+*/
 
 AFRAME.registerComponent('hypermove', {
     schema: {
