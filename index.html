@@ -1,6 +1,6 @@
 <!-- Working in Progress -->
 <!-- by mingxuan.fun -->
-<!-- join discord if you would like to work with me https://discord.gg/ShG2MRC7Qu -->
+<!-- join discord if you would like to work with me on this project https://discord.gg/ShG2MRC7Qu -->
 <html>
   <head>
     <meta charset="utf-8">
@@ -45,8 +45,9 @@
       fog="type: exponential; color: #222; density: 0.01"
     >
       <a-assets>
-        <a-asset-item id="model-1" src="assets/model-1.glb"></a-asset-item>
+        <a-asset-item id="model-1" src="assets/hermaphrodite-giant.glb"></a-asset-item>
         <a-asset-item id="main-scene" src="assets/peach.land.glb"></a-asset-item>
+        <a-asset-item id="navmesh" src="assets/navmesh.glb"></a-asset-item>
         <a-asset-item id="navmesh" src="assets/navmesh.glb"></a-asset-item>
         <!-- <a-mixin id="info-text" 
                  text="font: mozillavr; align: center; baseline: bottom; color: black; width: 0.55; wrapCount: 30"
@@ -59,12 +60,12 @@
         <!-- <img id="advertisement" src="ad.png"> -->
         <!-- <video id="kentucky-derby" src="derby.mp4"></video> -->
       </a-assets> 
-      <a-entity id="rig" movement-controls="constrainToNavMesh: false; fly: true">
+      <a-entity id="rig" position="0 0 -5" movement-controls="constrainToNavMesh: false; fly: false">
         <a-entity camera 
                   position="0 1.6 0"
                   look-controls="pointerLockEnabled: true">
                   <a-entity cursor
-                            raycaster="far: 10; interval: 500"
+                            raycaster="far: 20; interval: 500"
                             position="0 0 -1"
                             geometry="primitive: ring; radiusInner: 0.016; radiusOuter: 0.020"
                             material="color: white; shader: flat; opacity: 0.5">
@@ -74,7 +75,7 @@
         <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: highPoly; color: #cccccc"></a-entity>
       </a-entity>
       <a-entity gltf-model="#navmesh" visible="false" nav-mesh></a-entity>
-      <a-entity id="nft-example" geometry="primitive: sphere" material="color: pink; opacity: 0.5" position="0 1.5 -75`1qq" show-nft="nft-1"></a-entity>
+      <a-entity id="nft-example" gltf-model="#model-1" position="-1.48395 -9.76853 -125.31785" rotation="0 70 0" show-nft="nft-1"></a-entity>
       <a-entity position="0 2.25 -15" particle-system="color: pink,grey; preset: snow"></a-entity>
       <!-- <a-grid></a-grid> -->
       <!-- <a-ocean></a-ocean> -->
