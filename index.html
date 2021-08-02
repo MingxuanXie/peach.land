@@ -14,7 +14,7 @@
     <script src="scripts/build.js" defer></script>
     <script src="scripts/enable-ethereum.js" defer></script>
     <script src="scripts/pointer-unlock.js" defer></script>
-    <script src="scripts/nft-card.min.js" defer></script>
+    <!-- <script src="scripts/nft-card.min.js" defer></script> -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body oncontextmenu="return false">
@@ -33,9 +33,10 @@
 <!-- NFT IMPLEMENTATION -->
     <div class="nft-overlay">
       <div id="nft-1" hidden>
-        <nft-card contractAddress="0x495f947276749ce646f68ac8c248420045cb7b5e" tokenId="50309695389067780389388396025237871016333501548352288069828970737592438882305" horizontal></nft-card>
+        <nft-card contractAddress="0xfaee4b062449a24a3d0f211d08caac43ee3a1d9b" tokenId="23513180176578009253381660299000050270542600430206064071045840976141808041985" horizontal network="mainnet"></nft-card>
       </div>
     </div>
+    <nft-card contractAddress="0xfaee4b062449a24a3d0f211d08caac43ee3a1d9b" tokenId="23513180176578009253381660299000050270542600430206064071045840976141808041985"> </nft-card> <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
 <!-- Aframe -->
     <a-scene
       renderer="antialias: true; colorManagement: true; logarithmicDepthBuffer: false" 
