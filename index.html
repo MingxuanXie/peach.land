@@ -45,7 +45,7 @@
       fog="type: exponential; color: #222; density: 0.01"
     >
       <a-assets>
-        <a-asset-item id="model-1" src="assets/hermaphrodite-giant.glb"></a-asset-item>
+        <a-asset-item id="model-1" src="assets/qingliangting.glb"></a-asset-item>
         <a-asset-item id="main-scene" src="https://storage.opensea.io/files/a25e3cd4b3eb6d38e91d6029a926956e.glb"></a-asset-item>
         <a-asset-item id="navmesh" src="assets/navmesh.glb"></a-asset-item>
         <a-asset-item id="navmesh" src="assets/navmesh.glb"></a-asset-item>
@@ -75,14 +75,13 @@
         <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: highPoly; color: #cccccc"></a-entity>
       </a-entity>
       <a-entity gltf-model="#navmesh" visible="false" nav-mesh></a-entity>
-      <a-entity id="nft-example" gltf-model="#model-1" position="-1.48395 -9.76853 -125.31785" rotation="0 70 0" show-nft="nft-1"></a-entity>
+      <a-entity id="nft-example" gltf-model="#model-1" position="21.17249 0 -79.34638" rotation="0 -43.8112178046784 0" show-nft="nft-1"></a-entity>
       <a-entity position="0 2.25 -15" particle-system="color: pink,grey; preset: snow"></a-entity>
       <!-- <a-grid></a-grid> -->
       <!-- <a-ocean></a-ocean> -->
       <!-- <a-sky color="#ECECEC"></a-sky> -->
       <a-entity light="type: directional; color: #EEE; intensity: 1.3" position="0 4 4"></a-entity>
       <a-entity light="type: ambient; color: #999"></a-entity>
-      <!-- <a-entity id="model-entity" gltf-model="#model-1" show-info="#test" position="0 0 0.1" scale="1 1 1" animation-mixer shadow="receive: false; cast: true"></a-entity> -->
       <a-entity id="main-scene-entity" gltf-model="#main-scene" position="0 0 0" scale="1 1 1" shadow="receive: false; cast: true"></a-entity>
     </a-scene>
   </body>
