@@ -44,10 +44,10 @@
       <a-assets>
         <a-asset-item id="qingliangting-model" src="assets/qingliangting.glb"></a-asset-item>
         <a-asset-item id="anime-model" src="assets/bunny-girl.glb"></a-asset-item>
-        <a-asset-item id="scene-model" src="assets/peach.land.glb"></a-asset-item>
-        <!-- <a-asset-item id="navmesh" src="assets/navmesh.glb"></a-asset-item> -->
+        <a-asset-item id="scene-model" src="assets/example.glb"></a-asset-item>
+        <a-asset-item id="navmesh" src="assets/nav-mesh.glb"></a-asset-item>
       </a-assets> 
-      <a-entity id="rig" position="0 0 0" movement-controls="constrainToNavMesh: false; fly: false">
+      <a-entity id="rig" position="0 0 0" movement-controls="constrainToNavMesh: true; fly: false">
         <a-entity camera 
                   position="0 1.6 0"
                   look-controls="pointerLockEnabled: true">
@@ -63,10 +63,10 @@
       </a-entity>
       <a-entity light="type: directional; color: #EEE; intensity: 1.3" position="0 4 4"></a-entity>
       <a-entity light="type: ambient; color: #999"></a-entity>
-      <a-entity id="scene" gltf-model="#scene-model" position="0 0 5" scale="1 1 1" shadow="receive: false; cast: true"></a-entity>
+      <a-entity id="scene" gltf-model="#scene-model" position="0 0 5" scale="60 60 60" shadow="receive: false; cast: true"></a-entity>
+      <a-entity gltf-model="#navmesh" visible="false" position="0 0 5" scale="60 60 60" nav-mesh></a-entity>
       <a-entity id="anime-example" gltf-model="#anime-model" animation-mixer position="0 0 -5" scale="1.2 1.2 1.2" shadow="receive: false; cast: false"></a-entity>
       <a-entity id="nft-example" gltf-model="#qingliangting-model" position="20 0 -75" rotation="0 -43.8112178046784 0" show-nft="nft-1"></a-entity>
-      <!-- <a-entity gltf-model="#navmesh" visible="true" nav-mesh></a-entity> -->
       <!-- <a-grid></a-grid> -->
       <!-- <a-ocean></a-ocean> -->
       <!-- <a-sky color="#ECECEC"></a-sky> -->
